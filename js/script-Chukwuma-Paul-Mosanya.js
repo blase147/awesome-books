@@ -5,7 +5,6 @@ const addBook = document.getElementById('add-btn');
 const addTitle = document.getElementById('title');
 const addAuthor = document.getElementById('author');
 const removeBook = document.getElementById('remove-btn');
-const awesomeForm = document.getElementById ('awesome-form');
 
 data.forEach((data) => {
     const {
@@ -30,8 +29,8 @@ booksDisplay.appendChild(books);
 
 
 // Mobile form Local Storage
-const title = form.elements.item(0);
-const author = form.elements.item(1);
+const title = form.item(0);
+const author = form.item(1);
 function saveData() {
   const data = {
     Title: form.elements.item(0).value,
