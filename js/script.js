@@ -1,34 +1,5 @@
 import data from './appData.js';
 
-const booksDisplay = document.getElementById('books-display');
-const addBook = document.getElementById('add-btn');
-const addTitle = document.getElementById('title');
-const addAuthor = document.getElementById('author');
-const removeBook = document.getElementById('remove-btn');
-const awesomeForm = document.getElementById ('awesome-form');
-
-data.forEach((data) => {
-    const {
-      title, author,
-    } = data;
-
-    // const addbtn = books.querySelector('#add-btn');
-    // addbtn.addEventListener('click', () => {
-
-    const books = document.createElement('div');
-    books.innerHTML +=`
-    <div class="book-display-container">
-        <p>${title}</p>
-        <p>${author}</p>
-        <hr>
-        <button id="remove-btn" type="button">Remove</button>
-    </div>
-`;
-booksDisplay.appendChild(books);
-});
-// });
-
-
 // Mobile form Local Storage
 const title = form.elements.item(0);
 const author = form.elements.item(1);
@@ -61,3 +32,27 @@ author.addEventListener('change', (e) => {
   localStorage.setItem('data', JSON.stringify(formObject));
 });
 
+
+const booksDisplay = document.getElementById('books-display');
+
+// add books
+data.forEach((data) => {
+    const {
+      title, author,
+    } = data;
+
+    const booksBtn = project.querySelector('.add-btn');
+    booksBtn.addEventListener('click', () => {
+    const books = document.createElement('div');
+    booksDisplay.style.display = 'flex';
+    books.innerHTML +=`
+    <div class="book-display-container">
+        <p>${title}</p>
+        <p>${author}</p>
+        <hr>
+        <button id="remove-btn" type="button">Remove</button>
+    </div>
+`;
+booksDisplay.appendChild(books);
+});
+});

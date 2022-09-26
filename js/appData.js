@@ -1,14 +1,7 @@
-const data = [
-    {
-        title: 'Hello World',
-        author: 'Chukwuma and Diana',
-},
-
-{
-    title: 'New View',
-    author: 'Diana and Paul',
-}
-] ;
+const data = {
+        title: '',
+        author: '',
+};
 
 export default data; // export default data;
 
