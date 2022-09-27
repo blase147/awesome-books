@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Adding books to library
 const booksDisplay = document.querySelector('#books-display');
 const titleInput = document.querySelector('#book-title');
@@ -17,6 +18,10 @@ addBook.addEventListener("click", function(){
             booksDisplay.appendChild(books);
     }
 });
+=======
+import data from './appData.js';
+
+>>>>>>> 1a98c3f1826b152e0b486b6c8c2577fecc1f8009
 // Mobile form Local Storage
 const title = form.elements.item(0);
 const author = form.elements.item(1);
@@ -45,3 +50,31 @@ author.addEventListener('change', (e) => {
   formObject.author = e.target.value;
   localStorage.setItem('data', JSON.stringify(formObject));
 });
+<<<<<<< HEAD
+=======
+
+
+const booksDisplay = document.getElementById('books-display');
+
+// add books
+data.forEach((data) => {
+    const {
+      title, author,
+    } = data;
+
+    const booksBtn = project.querySelector('.add-btn');
+    booksBtn.addEventListener('click', () => {
+    const books = document.createElement('div');
+    booksDisplay.style.display = 'flex';
+    books.innerHTML +=`
+    <div class="book-display-container">
+        <p>${title}</p>
+        <p>${author}</p>
+        <hr>
+        <button id="remove-btn" type="button">Remove</button>
+    </div>
+`;
+booksDisplay.appendChild(books);
+});
+});
+>>>>>>> 1a98c3f1826b152e0b486b6c8c2577fecc1f8009
