@@ -3,21 +3,30 @@ const booksDisplay = document.querySelector('#books-display');
 const titleInput = document.querySelector('#book-title');
 const authorInput = document.querySelector('#author-name');
 const addBook = document.querySelector('#add-btn');
-addBook.addEventListener("click", function(){
-    if(titleInput.value == "" && authorInput.value == ""){
-        alert("Kindly fill in the inputs");
-    }else{
-            const books = document.createElement('div');
-            const newTitle = document.createElement('h');
-            newTitle.innerHTML = titleInput.value;
-            books.appendChild(newTitle);
-            const newAuthor = document.createElement('p');
-            newAuthor.innerHTML = authorInput.value;
-            books.appendChild(newAuthor);
-            booksDisplay.appendChild(books);
-    }
+addBook.addEventListener('click', () => {
+  if (titleInput.value === '' && authorInput.value === '') {
+    alert('Kindly fill in the inputs');
+  } else {
+    const books = document.createElement('div');
+    const newTitle = document.createElement('h');
+    newTitle.innerHTML = titleInput.value;
+    books.appendChild(newTitle);
+    const newAuthor = document.createElement('p');
+    newAuthor.innerHTML = authorInput.value;
+    books.appendChild(newAuthor);
+    booksDisplay.appendChild(books);
+
+    const removeBtn = document.createElement('button');
+    removeBtn.innerHTML = 'Remove Book';
+    books.appendChild(removeBtn);
+    removeBtn.addEventListener('click', () => {
+      booksDisplay.removeChild(books);
+    });
+  }
 });
+
 // Mobile form Local Storage
+const form = document.getElementById('form');
 const title = form.elements.item(0);
 const author = form.elements.item(1);
 function saveData() {
