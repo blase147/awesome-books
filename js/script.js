@@ -71,3 +71,6 @@ bookAdd.addEventListener('click', (e) => {
 document.addEventListener('DOMContentLoaded', () => {
   allLibrary.getLocalStorage();
 });
+
+const d =  Date();
+document.getElementById("date").innerHTML = new Date();
