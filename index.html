@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Books</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awesome Books</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-    <h1>Awesome Books</h1>
-    <div id="bookDisplay">
-    </div>
-    <div id="formContainer">
-        <hr>
-        <div>
-        <form id="form" action="">
-            <input id="book-title" type="text" name="title" placeholder="Title"><br><br>
-            <input  id="author-name" type="text" name="author" placeholder="Author"><br><br>
-            <!-- <span class="message"></span> -->
-            <button id="add-btn" type="button">Add</button>
-        </form>
-    </div>
+  <h1>All awesome Books</h1>
+  <div id="bookDisplay">
+  </div>
+  <div id="formContainer"></div>
+  <hr class="formLine">
+  <div>
+    <form id="form" action="">
+      <h2 class="heading">Add a new book</h2>
+      <input id="book-title" type="text" name="title" placeholder="Title"><br><br>
+      <input id="author-name" type="text" name="author" placeholder="Author"><br><br>
+      <!-- <span class="message"></span> -->
+      <button id="add-btn" type="button">Add</button>
+    </form>
+  </div>
 </body>
 <script type="module" src="js/script.js"></script>
+
 </html>
