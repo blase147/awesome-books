@@ -72,5 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
   allLibrary.getLocalStorage();
 });
 
-const d =  Date();
-document.getElementById("date").innerHTML = new Date();
+document.getElementById('date').innerHTML = new Date();
+
+// document.addEventListener('onload', (e) => {
+//   let x = document.getElementById('html');
+//   x = document.innerHTML.style.display = none;
+// });
