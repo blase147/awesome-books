@@ -4,13 +4,15 @@ body {
   background-color: #fff;
   justify-content: center;
   align-items: center;
-  height: 100%vh;
+  height: 100vh;
   padding: 80px;
 }
+
 #bookDisplay {
   border: 3px solid black;
   width: 50%;
 }
+
 .book-div {
   display: flex;
   flex-direction: row;
@@ -18,26 +20,33 @@ body {
   justify-content: space-between;
   padding: 0 10px;
 }
+
 .book-div:nth-child(odd) {
   background-color: rgb(235, 231, 231);
 }
+
 .remove {
   border: 3px solid black;
 }
+
 .formLine {
   border: 2px solid black;
   width: 80px;
   margin-top: 10px;
 }
+
 #form {
-margin-bottom: 90px;
+  margin-bottom: 90px;
 }
+
 #book-title {
   border: 2px solid black;
 }
+
 #author-name {
   border: 2px solid black;
 }
+
 #add-btn {
   border: 2px solid black;
 }

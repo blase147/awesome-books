@@ -15,6 +15,7 @@ class Booklibrary {
       },
     ];
   }
+
   // add books
   addBook(title, author) {
     this.books.push({
@@ -26,20 +27,24 @@ class Booklibrary {
     this.setLocalStorage();
     this.displayBooks();
   }
+
   removeBook(index) {
     this.books.splice(index, 1);
     this.setLocalStorage();
     this.displayBooks();
   }
+
   setLocalStorage() {
     localStorage.setItem('localLibraries', JSON.stringify(this.books));
   }
+
   getLocalStorage() {
     if (localStorage.getItem('localLibraries')) {
       this.books = JSON.parse(localStorage.getItem('localLibraries'));
     }
     this.displayBooks();
   }
+
   displayBooks() {
     bookDisplay.innerHTML = '';
     this.books.forEach((book, index) => {
