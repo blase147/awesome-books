@@ -1,56 +1,73 @@
-//  Adding books to library
-const booksDisplay = document.querySelector('#books-display');
-const titleInput = document.querySelector('#book-title');
-const authorInput = document.querySelector('#author-name');
-const addBook = document.querySelector('#add-btn');
-addBook.addEventListener('click', () => {
-  if (titleInput.value === '' && authorInput.value === '') {
-    alert('Kindly fill in the inputs');
-  } else {
-    const books = document.createElement('div');
-    const newTitle = document.createElement('h');
-    newTitle.innerHTML = titleInput.value;
-    books.appendChild(newTitle);
-    const newAuthor = document.createElement('p');
-    newAuthor.innerHTML = authorInput.value;
-    books.appendChild(newAuthor);
-    booksDisplay.appendChild(books);
-
-    const removeBtn = document.createElement('button');
-    removeBtn.innerHTML = 'Remove Book';
-    books.appendChild(removeBtn);
-    removeBtn.addEventListener('click', () => {
-      booksDisplay.removeChild(books);
+const bookDisplay = document.getElementById('bookDisplay');
+const bookTitle = document.getElementById('book-title');
+const bookAuthor = document.getElementById('author-name');
+const bookAdd = document.getElementById('add-btn');
+class Booklibrary {
+  constructor() {
+    this.books = [
+      {
+        title: 'Ghost',
+        author: 'Sidney Sheldon',
+      },
+      {
+        title: 'The Naked Face',
+        author: 'Sidney Sheldon',
+      },
+    ];
+  }
+  // add books
+  addBook(title, author) {
+    this.books.push({
+      title,
+      author,
+    });
+    bookAuthor.value = '';
+    bookTitle.value = '';
+    this.setLocalStorage();
+    this.displayBooks();
+  }
+  removeBook(index) {
+    this.books.splice(index, 1);
+    this.setLocalStorage();
+    this.displayBooks();
+  }
+  setLocalStorage() {
+    localStorage.setItem('localLibraries', JSON.stringify(this.books));
+  }
+  getLocalStorage() {
+    if (localStorage.getItem('localLibraries')) {
+      this.books = JSON.parse(localStorage.getItem('localLibraries'));
+    }
+    this.displayBooks();
+  }
+  displayBooks() {
+    bookDisplay.innerHTML = '';
+    this.books.forEach((book, index) => {
+      const h3 = document.createElement('div');
+      h3.classList.add('book-div');
+      const bookAuthors = document.createElement('p');
+      const bookNames = document.createElement('p');
+      const removeBtn = document.createElement('button');
+      bookAuthors.textContent = ` ${book.title}`;
+      bookNames.textContent = ` ${book.author}`;
+      removeBtn.textContent = 'remove';
+      removeBtn.classList.add('remove');
+      h3.append(bookAuthors, bookNames, removeBtn);
+      removeBtn.addEventListener('click', () => {
+        this.removeBook(index);
+      });
+      bookDisplay.appendChild(h3);
+      const line = document.createElement('hr');
+      line.className = 'remove';
+      h3.appendChild(line);
     });
   }
-});
-
-// Mobile form Local Storage
-const form = document.getElementById('form');
-const title = form.elements.item(0);
-const author = form.elements.item(1);
-function saveData() {
-  const data = {
-    Title: form.elements.item(0).value,
-    Author: form.elements.item(1).value,
-  };
-  localStorage.setItem('data', JSON.stringify(data));
 }
-let formObject = JSON.parse(localStorage.getItem('data'));
-if (!formObject) {
-  formObject = {
-    title: '',
-    author: '',
-  };
-  saveData();
-}
-title.value = formObject.title;
-title.addEventListener('change', (e) => {
-  formObject.title = e.target.value;
-  localStorage.setItem('data', JSON.stringify(formObject));
+const allLibrary = new Booklibrary();
+bookAdd.addEventListener('click', (e) => {
+  e.preventDefault();
+  allLibrary.addBook(bookTitle.value, bookAuthor.value);
 });
-author.value = formObject.author;
-author.addEventListener('change', (e) => {
-  formObject.author = e.target.value;
-  localStorage.setItem('data', JSON.stringify(formObject));
+document.addEventListener('DOMContentLoaded', () => {
+  allLibrary.getLocalStorage();
 });
