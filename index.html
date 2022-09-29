@@ -15,15 +15,17 @@
                 <p>Awesome Books</p>
             </div>
         <nav id="nav-items">
-            <a href="#awesome-books">List</a>
-            <a href="#formContainer">Add New</a>
-            <a href="#contact-information">Contact</a>
+            <a id="list" href="#awesome-books">List</a>
+            <a id="add-new" href="#formContainer">Add New</a>
+            <a id="contact-info" href="#contact-information">Contact</a>
         </nav>
     </header>
     <p id="date"></p>
     <h1 id="awesome-books" class="awesome-books">All awesome Books</h1>
-    <div id="bookDisplay">
-    </div>
+
+    <section id="bookDisplay">
+    </section>
+
     <hr class="formLine">
 
   <section id="formContainer">
@@ -31,7 +33,7 @@
       <h1 class="form-heading">Add a new book</h1>
       <input id="book-title" type="text" name="title" placeholder="Title"><br><br>
       <input id="author-name" type="text" name="author" placeholder="Author"><br><br>
-      <!-- <span class="message"></span> -->
+      <span class="message"></span>
       <div class="add-btn" >
         <button id="add-btn" type="button">Add</button>
     </div>
