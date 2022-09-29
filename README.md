@@ -28,7 +28,7 @@ All changes were successful as linters errors were all fixed.
 
 - GitHub: [@blase147](https://github.com/blase147)
 - Twitter: [@ChukwumaMosanya](https://twitter.com/ChukwumaMosanya)
-- LinkedIn: [ChukwumaMosanya](www.linkedin.com/in/chukwuma-mosanya-346453)
+- LinkedIn: [@ChukwumaMosanya](www.linkedin.com/in/chukwuma-mosanya-346453)
 --@Diana duya
 
 # 🤝 Contributing
