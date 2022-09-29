@@ -28,7 +28,7 @@ Here is a [link] (https://blase147.github.io/awesome-books/
 👤 **Chukwuma Paul Mosanya**
 - GitHub: [@blase147](https://github.com/blase147)
 - Twitter: [@ChukwumaMosanya](https://twitter.com/ChukwumaMosanya)
-- LinkedIn: [@ChukwumaMosanya](https://linkedin.com/in/chukwuma-mosanya-346453)
+- LinkedIn: [@ChukwumaMosanya](https://www.linkedin.com/in/chukwuma-mosanya-34645388)
 
 👤 **Diana Duya**
 - GitHub: [@Diana-Duya](https://github.com/Diana-Duya)
