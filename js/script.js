@@ -81,6 +81,16 @@ const addNew = document.getElementById('add-new');
 const contactInfo = document.getElementById('contact-info');
 const headerTitle = document.querySelector('.awesome-books');
 
+window.addEventListener('load', () => {
+  if(bookDisplay.value === null){
+    document.getElementById.innerHTML = ("Sorry there are no books for now.");
+  }else{
+  bookDisplay.style.display = 'block';
+  headerTitle.style.display = 'block';
+  contactInformation.style.display = 'none';
+  formContainer.style.display = 'none';
+}});
+
 listAchor.addEventListener('click', () => {
   bookDisplay.style.display = 'block';
   headerTitle.style.display = 'block';
