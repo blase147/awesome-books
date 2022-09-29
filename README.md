@@ -3,7 +3,7 @@
 All changes were successful as linters errors were all fixed. 
 
 # AWESOME BOOK PROJECT
-Here is a [link](https://blase147.github.io/awesome-books/
+Here is a [link] (https://blase147.github.io/awesome-books/
 ) to the live page.
 # Built With
 
@@ -26,10 +26,9 @@ Here is a [link](https://blase147.github.io/awesome-books/
 ## Authors
 
 👤 **Chukwuma Paul Mosanya**
-
 - GitHub: [@blase147](https://github.com/blase147)
 - Twitter: [@ChukwumaMosanya](https://twitter.com/ChukwumaMosanya)
-- LinkedIn: [ChukwumaMosanya](www.linkedin.com/in/chukwuma-mosanya-346453)
+- LinkedIn: [@ChukwumaMosanya](https://www.linkedin.com/in/chukwuma-mosanya-34645388)
 
 👤 **Diana Duya**
 - GitHub: [@Diana-Duya](https://github.com/Diana-Duya)
