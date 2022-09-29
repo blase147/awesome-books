@@ -74,35 +74,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.getElementById('date').innerHTML = new Date();
 
-
 const formContainer = document.getElementById('formContainer');
 const contactInformation = document.getElementById('contact-information');
-const bookListHeader = document.getElementById('awesome-books');
 const listAchor = document.getElementById('list');
 const addNew = document.getElementById('add-new');
 const contactInfo = document.getElementById('contact-info');
 const headerTitle = document.querySelector('.awesome-books');
 
+listAchor.addEventListener('click', () => {
+  bookDisplay.style.display = 'block';
+  headerTitle.style.display = 'block';
+  contactInformation.style.display = 'none';
+  formContainer.style.display = 'none';
+});
 
+addNew.addEventListener('click', () => {
+  bookDisplay.style.display = 'none';
+  headerTitle.style.display = 'none';
+  contactInformation.style.display = 'none';
+  formContainer.style.display = 'block';
+});
 
-listAchor.addEventListener('click', () =>{
-  bookDisplay.style.display = "block";
-  headerTitle.style.display = "block";
-  contactInformation.style.display = "none";
-  formContainer.style.display = "none";
-})
-
-addNew.addEventListener('click', () =>{
-  bookDisplay.style.display = "none";
-  headerTitle.style.display = "none";
-  contactInformation.style.display = "none";
-  formContainer.style.display = "block";
-})
-
-contactInfo.addEventListener('click', () =>{
-  bookDisplay.style.display = "none";
-  headerTitle.style.display = "none";
-  contactInformation.style.display = "block";
-  formContainer.style.display = "none";
-})
-
+contactInfo.addEventListener('click', () => {
+  bookDisplay.style.display = 'none';
+  headerTitle.style.display = 'none';
+  contactInformation.style.display = 'block';
+  formContainer.style.display = 'none';
+});
